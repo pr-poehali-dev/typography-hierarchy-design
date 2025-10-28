@@ -90,7 +90,7 @@ const Index = () => {
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto animate-fade-in-up">
             <h1 className="text-8xl md:text-9xl font-bold mb-6 tracking-tight leading-none">
-              Я
+              Я ГРАФИЧЕСКИЙ
               <br />
               ДИЗАЙНЕР
             </h1>
@@ -98,7 +98,7 @@ const Index = () => {
               Создаю прекрасные вещи
             </p>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-              Привет! Я Карина Бахрова — профессиональный дизайнер с многолетним опытом создания уникальных визуальных решений. Превращаю идеи в красивые и функциональные дизайны, которые работают на ваш бизнес.
+              Привет! Я Карина Бахрова — молодой графический дизайнер. Я не люблю клише и обыденность, поэтому всё, что я создаю, имеет свой уникальный характер и настроение. Превращаю идеи в красивые визуальные решения, которые запоминаются.
             </p>
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-sm uppercase tracking-widest">
               УЗНАТЬ БОЛЬШЕ
@@ -119,34 +119,31 @@ const Index = () => {
                 />
               </div>
               <h2 className="text-6xl font-bold mb-8 uppercase tracking-tight">
-                КРЕАТИВНОСТЬ И
+                МОИ
                 <br />
-                ПРОФЕССИОНАЛИЗМ
+                НАВЫКИ
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Я создаю визуальные решения, которые не только красивы, но и эффективны. Мой подход основан на глубоком понимании бизнес-задач и современных дизайн-трендов. Каждый проект — это уникальная история, рассказанная через визуальные образы.
+                Я работаю в профессиональных программах для графического дизайна, которые позволяют создавать проекты любой сложности — от логотипов до масштабных брендинговых систем.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Работаю с брендами любого масштаба — от стартапов до крупных компаний. Помогаю выделиться на рынке через продуманный дизайн, который запоминается и работает на результат.
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Постоянно развиваюсь и изучаю новые инструменты, чтобы предлагать клиентам современные и эффективные решения.
               </p>
             </div>
-            <div className="space-y-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
               {[
-                { title: 'Опыт работы', value: '8+ лет', description: 'Профессиональный опыт в сфере дизайна и брендинга', icon: 'Award' },
-                { title: 'Проектов', value: '150+', description: 'Успешно реализованных проектов для клиентов из разных отраслей', icon: 'Briefcase' },
-                { title: 'Клиентов', value: '80+', description: 'Довольных клиентов, которые рекомендуют меня своим партнёрам', icon: 'Users' },
-              ].map((stat, index) => (
-                <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all">
-                  <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <Icon name={stat.icon as any} size={32} className="text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-serif text-3xl font-bold mb-1 text-primary">{stat.value}</h3>
-                      <p className="font-semibold text-lg mb-2">{stat.title}</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{stat.description}</p>
-                    </div>
+                { name: 'Adobe Photoshop', icon: 'Image' },
+                { name: 'Adobe Illustrator', icon: 'PenTool' },
+                { name: 'CorelDRAW', icon: 'Palette' },
+                { name: 'Figma', icon: 'Layers' },
+                { name: 'Adobe InDesign', icon: 'FileText' },
+                { name: 'Canva', icon: 'Sparkles' },
+              ].map((tool, index) => (
+                <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:scale-105 transition-all group text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <Icon name={tool.icon as any} size={32} className="text-primary" />
                   </div>
+                  <p className="font-semibold text-sm">{tool.name}</p>
                 </Card>
               ))}
             </div>

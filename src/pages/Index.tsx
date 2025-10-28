@@ -30,37 +30,37 @@ const Index = () => {
       >
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="font-script text-3xl text-foreground">Jalsone</div>
+            <div className="font-script text-3xl text-foreground">Карина Бахрова</div>
             <div className="hidden md:flex items-center gap-8">
               <button
                 onClick={() => scrollToSection('home')}
                 className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider"
               >
-                HOME
+                ГЛАВНАЯ
               </button>
               <button
                 onClick={() => scrollToSection('about')}
                 className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider"
               >
-                ABOUT US
+                ОБО МНЕ
               </button>
               <button
                 onClick={() => scrollToSection('services')}
                 className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider"
               >
-                SERVICES
+                УСЛУГИ
               </button>
               <button
                 onClick={() => scrollToSection('portfolio')}
                 className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider"
               >
-                PORTFOLIO
+                ПОРТФОЛИО
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
                 className="text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider"
               >
-                CONTACT US
+                КОНТАКТЫ
               </button>
             </div>
             <div className="flex gap-4">
@@ -90,18 +90,18 @@ const Index = () => {
         <div className="container mx-auto px-6 text-center relative z-10">
           <div className="max-w-4xl mx-auto animate-fade-in-up">
             <h1 className="text-8xl md:text-9xl font-bold mb-6 tracking-tight leading-none">
-              I AM
+              Я
               <br />
-              DESIGNER
+              ДИЗАЙНЕР
             </h1>
             <p className="font-script text-4xl md:text-5xl text-primary mb-8">
-              I Make Wonderful Things
+              Создаю прекрасные вещи
             </p>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed font-light">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Привет! Я Карина Бахрова — профессиональный дизайнер с многолетним опытом создания уникальных визуальных решений. Превращаю идеи в красивые и функциональные дизайны, которые работают на ваш бизнес.
             </p>
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-sm uppercase tracking-widest">
-              READ MORE
+              УЗНАТЬ БОЛЬШЕ
             </Button>
           </div>
         </div>
@@ -114,41 +114,37 @@ const Index = () => {
               <div className="mb-12">
                 <img 
                   src="https://cdn.poehali.dev/files/6c231365-c43d-4568-a76c-5f59283222cf.jpg"
-                  alt="Designer"
+                  alt="Карина Бахрова"
                   className="w-64 h-64 object-cover rounded-lg shadow-2xl"
                 />
               </div>
               <h2 className="text-6xl font-bold mb-8 uppercase tracking-tight">
-                CREATIVE AND
+                КРЕАТИВНОСТЬ И
                 <br />
-                PROFESSIONAL
+                ПРОФЕССИОНАЛИЗМ
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                Я создаю визуальные решения, которые не только красивы, но и эффективны. Мой подход основан на глубоком понимании бизнес-задач и современных дизайн-трендов. Каждый проект — это уникальная история, рассказанная через визуальные образы.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                Работаю с брендами любого масштаба — от стартапов до крупных компаний. Помогаю выделиться на рынке через продуманный дизайн, который запоминается и работает на результат.
               </p>
             </div>
             <div className="space-y-6">
               {[
-                { name: 'John Johnson', role: 'Manager', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.', img: 'https://cdn.poehali.dev/files/b35d1aec-fcbd-4789-8bbd-223755249595.jpg' },
-                { name: 'Anna Anderson', role: 'Designer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.', img: 'https://cdn.poehali.dev/files/6bfd1a25-316a-4c92-a0e5-aab4c30cae5a.jpg' },
-                { name: 'Peter Peterson', role: 'Developer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.', img: 'https://cdn.poehali.dev/files/6c231365-c43d-4568-a76c-5f59283222cf.jpg' },
-              ].map((member, index) => (
+                { title: 'Опыт работы', value: '8+ лет', description: 'Профессиональный опыт в сфере дизайна и брендинга', icon: 'Award' },
+                { title: 'Проектов', value: '150+', description: 'Успешно реализованных проектов для клиентов из разных отраслей', icon: 'Briefcase' },
+                { title: 'Клиентов', value: '80+', description: 'Довольных клиентов, которые рекомендуют меня своим партнёрам', icon: 'Users' },
+              ].map((stat, index) => (
                 <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
-                      <img 
-                        src={member.img}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                      />
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <Icon name={stat.icon as any} size={32} className="text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl font-bold mb-1">{member.name}</h3>
-                      <p className="text-primary text-sm mb-2">{member.role}</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{member.description}</p>
+                      <h3 className="font-serif text-3xl font-bold mb-1 text-primary">{stat.value}</h3>
+                      <p className="font-semibold text-lg mb-2">{stat.title}</p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{stat.description}</p>
                     </div>
                   </div>
                 </Card>
@@ -161,19 +157,19 @@ const Index = () => {
       <section id="services" className="py-32">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-6xl font-bold mb-6 uppercase tracking-tight">OUR SERVICES</h2>
+            <h2 className="text-6xl font-bold mb-6 uppercase tracking-tight">МОИ УСЛУГИ</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We provide professional design and development services
+              Предоставляю полный спектр дизайнерских услуг для вашего бизнеса
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: 'Palette', title: 'Graphic Design', description: 'Creating stunning visual identities and brand materials that make your business stand out.' },
-              { icon: 'Code', title: 'Web Development', description: 'Building responsive and modern websites with cutting-edge technologies and best practices.' },
-              { icon: 'Smartphone', title: 'Mobile Apps', description: 'Developing intuitive mobile applications for iOS and Android platforms.' },
-              { icon: 'Search', title: 'SEO Optimization', description: 'Improving your website visibility and rankings in search engines.' },
-              { icon: 'PenTool', title: 'UI/UX Design', description: 'Designing user-friendly interfaces that provide excellent user experience.' },
-              { icon: 'Megaphone', title: 'Marketing', description: 'Strategic marketing campaigns to grow your business and reach new audiences.' },
+              { icon: 'Palette', title: 'Графический дизайн', description: 'Создание ярких визуальных образов и брендовых материалов, которые выделяют ваш бизнес среди конкурентов.' },
+              { icon: 'Layout', title: 'Веб-дизайн', description: 'Разработка современных и отзывчивых сайтов с идеальным пользовательским опытом.' },
+              { icon: 'Briefcase', title: 'Брендинг', description: 'Комплексная разработка фирменного стиля: от логотипа до полного бренд-бука.' },
+              { icon: 'Image', title: 'Иллюстрации', description: 'Авторские иллюстрации для рекламы, соцсетей и полиграфии.' },
+              { icon: 'PenTool', title: 'UI/UX дизайн', description: 'Проектирование интерфейсов, которые любят пользователи.' },
+              { icon: 'FileText', title: 'Полиграфия', description: 'Дизайн визиток, буклетов, плакатов и других печатных материалов.' },
             ].map((service, index) => (
               <Card key={index} className="p-8 text-center bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:shadow-xl transition-all group">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -190,15 +186,15 @@ const Index = () => {
       <section id="portfolio" className="py-32 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
-            <h2 className="text-6xl font-bold mb-6 uppercase tracking-tight">SELECTED WORK</h2>
-            <p className="text-muted-foreground text-lg">A showcase of our best projects</p>
+            <h2 className="text-6xl font-bold mb-6 uppercase tracking-tight">ПОРТФОЛИО</h2>
+            <p className="text-muted-foreground text-lg">Избранные работы из моего портфолио</p>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4a35d3f4-550d-485e-ab92-7f625e90507c.jpg', title: 'Workspace Design', category: 'Interior / Photography' },
-              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4fb342cc-4a6b-408a-b8a9-db516a382255.jpg', title: 'Creative Studio', category: 'Web Design / Branding' },
-              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/cafb4c6b-640a-47fe-8327-adda6762b68b.jpg', title: 'Professional Portrait', category: 'Photography / Branding' },
-              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4a35d3f4-550d-485e-ab92-7f625e90507c.jpg', title: 'Modern Workspace', category: 'Web Design / UI/UX' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4a35d3f4-550d-485e-ab92-7f625e90507c.jpg', title: 'Дизайн рабочего пространства', category: 'Интерьер / Фотография' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4fb342cc-4a6b-408a-b8a9-db516a382255.jpg', title: 'Креативная студия', category: 'Веб-дизайн / Брендинг' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/cafb4c6b-640a-47fe-8327-adda6762b68b.jpg', title: 'Профессиональный портрет', category: 'Фотография / Брендинг' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4a35d3f4-550d-485e-ab92-7f625e90507c.jpg', title: 'Современное рабочее место', category: 'Веб-дизайн / UI/UX' },
             ].map((item, index) => (
               <Card key={index} className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all">
                 <div className="aspect-video bg-muted relative overflow-hidden">
@@ -223,17 +219,17 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-6xl font-bold mb-6 uppercase tracking-tight">GET IN TOUCH</h2>
+              <h2 className="text-6xl font-bold mb-6 uppercase tracking-tight">СВЯЗАТЬСЯ СО МНОЙ</h2>
               <p className="text-muted-foreground text-lg">
-                Let's discuss your next project
+                Обсудим ваш проект и воплотим его в жизнь
               </p>
             </div>
             <Card className="p-8 md:p-12 bg-card/50 backdrop-blur-sm border-border/50">
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Name</label>
-                    <Input placeholder="Your Name" className="bg-background/50" />
+                    <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Имя</label>
+                    <Input placeholder="Ваше имя" className="bg-background/50" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Email</label>
@@ -241,15 +237,15 @@ const Index = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Subject</label>
-                  <Input placeholder="Project inquiry" className="bg-background/50" />
+                  <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Тема</label>
+                  <Input placeholder="О чём ваш проект?" className="bg-background/50" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Message</label>
-                  <Textarea placeholder="Tell us about your project..." rows={6} className="bg-background/50" />
+                  <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Сообщение</label>
+                  <Textarea placeholder="Расскажите подробнее о вашей задаче..." rows={6} className="bg-background/50" />
                 </div>
                 <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-sm uppercase tracking-widest">
-                  SEND MESSAGE
+                  ОТПРАВИТЬ СООБЩЕНИЕ
                 </Button>
               </form>
             </Card>
@@ -260,9 +256,9 @@ const Index = () => {
       <footer className="py-12 border-t border-border/50">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="font-script text-3xl text-foreground">Jalsone</div>
+            <div className="font-script text-3xl text-foreground">Карина Бахрова</div>
             <p className="text-muted-foreground text-sm">
-              © 2025 Jalsone. All rights reserved.
+              © 2025 Карина Бахрова. Все права защищены.
             </p>
             <div className="flex gap-4">
               <Icon name="Facebook" size={20} className="text-foreground hover:text-primary cursor-pointer transition-colors" />

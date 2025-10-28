@@ -213,12 +213,16 @@ const Index = () => {
             <h2 className="text-6xl font-bold mb-6 uppercase tracking-tight">ПОРТФОЛИО</h2>
             <p className="text-muted-foreground text-lg">Избранные работы из моего портфолио</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4a35d3f4-550d-485e-ab92-7f625e90507c.jpg', title: 'Дизайн рабочего пространства', category: 'Интерьер / Фотография' },
-              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4fb342cc-4a6b-408a-b8a9-db516a382255.jpg', title: 'Креативная студия', category: 'Веб-дизайн / Брендинг' },
-              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/cafb4c6b-640a-47fe-8327-adda6762b68b.jpg', title: 'Профессиональный портрет', category: 'Фотография / Брендинг' },
-              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4a35d3f4-550d-485e-ab92-7f625e90507c.jpg', title: 'Современное рабочее место', category: 'Веб-дизайн / UI/UX' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4a35d3f4-550d-485e-ab92-7f625e90507c.jpg', title: 'Логотип и фирменный стиль', category: 'Брендинг' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/fbc3f308-721b-48a9-97d0-62e59b01ed9c.jpg', title: 'Дизайн полиграфии', category: 'Корпоративный стиль' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/4a2308b5-90d0-44a4-9639-37ecd6775d6d.jpg', title: 'Дизайн упаковки', category: 'Product Design' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/7fd797f9-233d-49ec-8e95-1fe8cc0f8786.jpg', title: 'Баннеры для соцсетей', category: 'Digital Design' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/8d96b0c6-1706-43cc-9a23-1bcdf3056472.jpg', title: 'Афиши и плакаты', category: 'Event Design' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/2407b14e-1199-45f9-8e6b-f656be72164c.jpg', title: 'Презентации', category: 'Business Design' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/f0e1d88e-bb01-4ac2-b0c1-a68c5d581d72.jpg', title: 'Иллюстрации', category: 'Art & Illustration' },
+              { img: 'https://cdn.poehali.dev/projects/9846e494-419c-4a9b-a3eb-35dadb666347/files/e5b13c2e-2b3b-44a6-b0f9-67dd10d041ab.jpg', title: 'Индивидуальные проекты', category: 'Custom Design' },
             ].map((item, index) => (
               <Card key={index} className="group overflow-hidden bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all">
                 <div className="aspect-video bg-muted relative overflow-hidden">

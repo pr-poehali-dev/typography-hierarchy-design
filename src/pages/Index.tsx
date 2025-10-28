@@ -245,38 +245,57 @@ const Index = () => {
 
       <section id="contact" className="py-32">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-6xl font-bold mb-6 uppercase tracking-tight">СВЯЗАТЬСЯ СО МНОЙ</h2>
               <p className="text-muted-foreground text-lg">
                 Обсудим ваш проект и воплотим его в жизнь
               </p>
             </div>
-            <Card className="p-8 md:p-12 bg-card/50 backdrop-blur-sm border-border/50">
-              <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Имя</label>
-                    <Input placeholder="Ваше имя" className="bg-background/50" />
+            <div className="grid md:grid-cols-[1fr_auto] gap-8 items-start">
+              <Card className="p-8 md:p-12 bg-card/50 backdrop-blur-sm border-border/50">
+                <form className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Имя</label>
+                      <Input placeholder="Ваше имя" className="bg-background/50" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Email</label>
+                      <Input type="email" placeholder="your@email.com" className="bg-background/50" />
+                    </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Email</label>
-                    <Input type="email" placeholder="your@email.com" className="bg-background/50" />
+                    <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Тема</label>
+                    <Input placeholder="О чём ваш проект?" className="bg-background/50" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Сообщение</label>
+                    <Textarea placeholder="Расскажите подробнее о вашей задаче..." rows={6} className="bg-background/50" />
+                  </div>
+                  <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-sm uppercase tracking-widest">
+                    ОТПРАВИТЬ СООБЩЕНИЕ
+                  </Button>
+                </form>
+              </Card>
+              <Card className="p-8 bg-card/50 backdrop-blur-sm border-border/50 text-center min-w-[280px]">
+                <div className="mb-4">
+                  <h3 className="font-serif text-2xl font-bold mb-2">Моё портфолио</h3>
+                  <p className="text-muted-foreground text-sm mb-6">Смотрите больше работ на Behance</p>
+                </div>
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-primary/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="relative bg-white p-4 rounded-lg">
+                    <img 
+                      src="https://cdn.poehali.dev/files/a2725e13-ddae-43e1-97ef-31b718405955.png" 
+                      alt="QR код на портфолио Behance"
+                      className="w-full h-auto"
+                    />
                   </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Тема</label>
-                  <Input placeholder="О чём ваш проект?" className="bg-background/50" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2 uppercase tracking-wider">Сообщение</label>
-                  <Textarea placeholder="Расскажите подробнее о вашей задаче..." rows={6} className="bg-background/50" />
-                </div>
-                <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-sm uppercase tracking-widest">
-                  ОТПРАВИТЬ СООБЩЕНИЕ
-                </Button>
-              </form>
-            </Card>
+                <p className="mt-4 text-xs text-muted-foreground uppercase tracking-wider">Наведите камеру телефона</p>
+              </Card>
+            </div>
           </div>
         </div>
       </section>

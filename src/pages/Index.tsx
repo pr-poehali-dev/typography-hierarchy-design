@@ -111,6 +111,13 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-up">
+              <div className="mb-12">
+                <img 
+                  src="https://cdn.poehali.dev/files/6c231365-c43d-4568-a76c-5f59283222cf.jpg"
+                  alt="Designer"
+                  className="w-64 h-64 object-cover rounded-lg shadow-2xl"
+                />
+              </div>
               <h2 className="text-6xl font-bold mb-8 uppercase tracking-tight">
                 CREATIVE AND
                 <br />
@@ -125,14 +132,18 @@ const Index = () => {
             </div>
             <div className="space-y-6">
               {[
-                { name: 'John Johnson', role: 'Manager', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.' },
-                { name: 'Anna Anderson', role: 'Designer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.' },
-                { name: 'Peter Peterson', role: 'Developer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.' },
+                { name: 'John Johnson', role: 'Manager', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.', img: 'https://cdn.poehali.dev/files/b35d1aec-fcbd-4789-8bbd-223755249595.jpg' },
+                { name: 'Anna Anderson', role: 'Designer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.', img: 'https://cdn.poehali.dev/files/6bfd1a25-316a-4c92-a0e5-aab4c30cae5a.jpg' },
+                { name: 'Peter Peterson', role: 'Developer', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt.', img: 'https://cdn.poehali.dev/files/6c231365-c43d-4568-a76c-5f59283222cf.jpg' },
               ].map((member, index) => (
                 <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all">
                   <div className="flex items-start gap-4">
-                    <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
-                      <Icon name="User" size={32} className="text-muted-foreground" />
+                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0">
+                      <img 
+                        src={member.img}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div>
                       <h3 className="font-serif text-xl font-bold mb-1">{member.name}</h3>

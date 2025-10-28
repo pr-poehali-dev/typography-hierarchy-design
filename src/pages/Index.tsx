@@ -130,22 +130,47 @@ const Index = () => {
                 Постоянно развиваюсь и изучаю новые инструменты, чтобы предлагать клиентам современные и эффективные решения.
               </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-              {[
-                { name: 'Adobe Photoshop', icon: 'Image' },
-                { name: 'Adobe Illustrator', icon: 'PenTool' },
-                { name: 'CorelDRAW', icon: 'Palette' },
-                { name: 'Figma', icon: 'Layers' },
-                { name: 'Adobe InDesign', icon: 'FileText' },
-                { name: 'Canva', icon: 'Sparkles' },
-              ].map((tool, index) => (
-                <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:scale-105 transition-all group text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Icon name={tool.icon as any} size={32} className="text-primary" />
-                  </div>
-                  <p className="font-semibold text-sm">{tool.name}</p>
-                </Card>
-              ))}
+            <div>
+              <h3 className="text-2xl font-bold mb-6 text-center">Программы</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+                {[
+                  { name: 'Adobe Photoshop', icon: 'Image' },
+                  { name: 'Adobe Illustrator', icon: 'PenTool' },
+                  { name: 'CorelDRAW', icon: 'Palette' },
+                  { name: 'Figma', icon: 'Layers' },
+                  { name: 'Adobe InDesign', icon: 'FileText' },
+                  { name: 'Canva', icon: 'Sparkles' },
+                ].map((tool, index) => (
+                  <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:scale-105 transition-all group text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                      <Icon name={tool.icon as any} size={32} className="text-primary" />
+                    </div>
+                    <p className="font-semibold text-sm">{tool.name}</p>
+                  </Card>
+                ))}
+              </div>
+              <h3 className="text-2xl font-bold mb-6 text-center">Мои качества</h3>
+              <div className="grid grid-cols-1 gap-4">
+                {[
+                  { name: 'Внимание к деталям', icon: 'Eye', description: 'Тщательная проработка каждого элемента дизайна' },
+                  { name: 'Творческое видение', icon: 'Lightbulb', description: 'Нестандартный подход к решению задач' },
+                  { name: 'Тайм-менеджмент', icon: 'Clock', description: 'Соблюдение сроков и эффективное планирование' },
+                  { name: 'Эмпатия', icon: 'Heart', description: 'Понимание потребностей и пожеланий клиента' },
+                  { name: 'Идейность', icon: 'Sparkles', description: 'Генерация свежих и оригинальных концепций' },
+                ].map((quality, index) => (
+                  <Card key={index} className="p-4 bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 transition-all">
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Icon name={quality.icon as any} size={24} className="text-primary" />
+                      </div>
+                      <div>
+                        <p className="font-bold text-base">{quality.name}</p>
+                        <p className="text-sm text-muted-foreground">{quality.description}</p>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -161,12 +186,14 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { icon: 'Palette', title: 'Графический дизайн', description: 'Создание ярких визуальных образов и брендовых материалов, которые выделяют ваш бизнес среди конкурентов.' },
-              { icon: 'Layout', title: 'Веб-дизайн', description: 'Разработка современных и отзывчивых сайтов с идеальным пользовательским опытом.' },
-              { icon: 'Briefcase', title: 'Брендинг', description: 'Комплексная разработка фирменного стиля: от логотипа до полного бренд-бука.' },
-              { icon: 'Image', title: 'Иллюстрации', description: 'Авторские иллюстрации для рекламы, соцсетей и полиграфии.' },
-              { icon: 'PenTool', title: 'UI/UX дизайн', description: 'Проектирование интерфейсов, которые любят пользователи.' },
-              { icon: 'FileText', title: 'Полиграфия', description: 'Дизайн визиток, буклетов, плакатов и других печатных материалов.' },
+              { icon: 'Stamp', title: 'Логотип', description: 'Создание уникального и запоминающегося логотипа, который отражает суть вашего бренда.' },
+              { icon: 'FileText', title: 'Дизайн полиграфии', description: 'Сертификаты, визитки, буклеты, флаеры и другие печатные материалы с профессиональным дизайном.' },
+              { icon: 'Package', title: 'Дизайн упаковки', description: 'Разработка привлекательной упаковки, которая выделяет ваш продукт на полке.' },
+              { icon: 'Monitor', title: 'Баннеры', description: 'Яркие и эффективные баннеры для веб-сайтов, соцсетей и наружной рекламы.' },
+              { icon: 'Image', title: 'Афиши и плакаты', description: 'Креативные афиши и плакаты для мероприятий, концертов и промо-кампаний.' },
+              { icon: 'Presentation', title: 'Презентации', description: 'Стильные презентации для бизнеса, которые убеждают и впечатляют.' },
+              { icon: 'Palette', title: 'Иллюстрации', description: 'Авторские иллюстрации для любых целей: от книг до рекламных кампаний.' },
+              { icon: 'Sparkles', title: 'Индивидуальные заказы', description: 'Готова воплотить в жизнь ваши уникальные идеи и нестандартные проекты.' },
             ].map((service, index) => (
               <Card key={index} className="p-8 text-center bg-card/50 backdrop-blur-sm border-border/50 hover:border-primary/50 hover:shadow-xl transition-all group">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
